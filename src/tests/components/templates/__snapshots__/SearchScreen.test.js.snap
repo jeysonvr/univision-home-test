@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <SearchScreen /> should show component correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <h3>
+      Search your favorite gifts
+    </h3>
+    <hr />
+  </div>
+  <form
+    className="row m-2"
+    onSubmit={[Function]}
+  >
+    <label
+      className="col-2 col-sm-10 col-md-2"
+    >
+      Keyword: 
+    </label>
+    <input
+      autoComplete="off"
+      className="col-12 col-sm-10 col-md-6"
+      name="keyword"
+      onChange={[Function]}
+      placeholder="Search ..."
+      style={
+        Object {
+          "marginRight": "10px",
+        }
+      }
+      type="text"
+      value=""
+    />
+    <button
+      className="btn btn-primary col-sm-10 col-md-3 mt-1"
+      onClick={[Function]}
+    >
+      <i
+        className=""
+      />
+      Search
+    </button>
+  </form>
+  Array [
+    Array [
+      <p
+        className="card"
+      >
+        Loading
+      </p>,
+      <div
+        className="alert alert-primary m-5"
+        role="alert"
+      >
+        Search something ...
+      </div>,
+    ],
+    Array [
+      <div
+        className="modal animate__animated animate__fadeIn"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          className="modal-dialog modal-dialog-centered"
+        >
+          <div
+            className="modal-content text-center"
+          >
+            <div
+              className="modal-header"
+            >
+              <h5
+                className="modal-title"
+              >
+                b
+              </h5>
+              <button
+                className="btn button__close"
+                onClick={[Function]}
+              >
+                <i
+                  className="fas fa-times-circle fa-2x"
+                />
+              </button>
+            </div>
+            <div
+              className="modal-body card"
+            >
+              <img
+                alt="b"
+                className="img-fluid"
+                src="a"
+              />
+            </div>
+          </div>
+        </div>
+      </div>,
+      <div
+        className="modal-backdrop fade show"
+      />,
+    ],
+  ]
+</div>
+`;

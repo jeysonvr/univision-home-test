@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from "react-redux";
-import { setKeyword } from '../../actions/search';
+import { setKeyword, setScrollSlider } from '../../actions/search';
 import { SearchForm } from '../organisms/SearchForm';
 import { SearchResult } from '../organisms/SearchResult';
 
@@ -15,6 +15,7 @@ export const SearchScreen = () => {
 
     const handleSearch = (keyword) => {
         dispatch( setKeyword(keyword, 0) );
+        dispatch( setScrollSlider(0) );
     }
     
     return (

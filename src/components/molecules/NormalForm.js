@@ -12,13 +12,6 @@ export const NormalForm = ({ handleSearch }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if( document.querySelector('.gridItem__card-grid') ) {
-            document.querySelector('.gridItem__card-grid').classList.add('fast');
-            document.querySelector('.gridItem__card-grid').scrollLeft = 0;
-            document.querySelector('.gridItem__card-grid').classList.remove('fast');
-        }
-
         handleSearch(keyword);
     }
 

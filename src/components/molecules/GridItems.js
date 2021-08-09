@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setScrollSlider } from '../../actions/search';
 import { imgRequired } from '../../helpers/extra';
@@ -8,25 +8,34 @@ import { GridItem } from '../atoms/GridItem';
 
 export const GridItems = ({ handleRequiredImage }) => {
     
+    const divRef = useRef();
     const dispatch = useDispatch();
     const { keyword, offset, scrollSlider } = useSelector(state => state.search);
     const { data:images, loading } = useFetchGifs(keyword, offset);
 
     const handleScrollLeft = () => {
-        document.querySelector('.gridItem__card-grid').scrollLeft -= 160;
+        divRef.current.scrollLeft -= 160;
     }
 
     const handleScrollRight = () => {
-        document.querySelector('.gridItem__card-grid').scrollLeft += 160;
+        divRef.current.scrollLeft += 160;
     }
 
     const handleScroll = () => {
-        dispatch( setScrollSlider(document.querySelector('.gridItem__card-grid').scrollLeft) );
+        dispatch( setScrollSlider(divRef.current.scrollLeft) );
 
-        if( imgRequired() ) {
+        if( imgRequired(divRef.current) ) {
             handleRequiredImage();
         }
     }
+
+    useEffect(() => {
+        if( divRef.current && scrollSlider === 0 ){
+            divRef.current.classList.add('fast');
+            divRef.current.scrollLeft = 0;
+            divRef.current.classList.remove('fast');
+        }
+    }, [scrollSlider])
 
     return (
         <>
@@ -35,7 +44,11 @@ export const GridItems = ({ handleRequiredImage }) => {
             {
                 (images.length) 
                 ? 
-                    <div className="gridItem__card-grid" onScroll={ handleScroll }>
+                    <div 
+                        className="gridItem__card-grid" 
+                        onScroll={ handleScroll } 
+                        ref={ divRef }
+                    >
                         <div className="gridItem__button left">
                             <Button
                                 icon={ 'fas fa-angle-left' }

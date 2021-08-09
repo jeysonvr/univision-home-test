@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <GridItem /> should show component correctly 1`] = `
+<div
+  className="gridItem__container animate__animated animate__fadeIn"
+>
+  <img
+    className="img-thumbnail lazy"
+    onClick={[Function]}
+  />
+</div>
+`;

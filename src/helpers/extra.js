@@ -21,9 +21,9 @@ export const elementInViewport = (el, parentScrollPosition) => {
     }
 };
 
-export const imgRequired = () => {
-    const maxDivScroll = document.querySelector('.gridItem__card-grid').scrollWidth - document.querySelector('.gridItem__card-grid').clientWidth;
-    const actualDivScroll = maxDivScroll - document.querySelector('.gridItem__card-grid').scrollLeft;
+export const imgRequired = (divRef) => {
+    const maxDivScroll = divRef.scrollWidth - divRef.clientWidth;
+    const actualDivScroll = maxDivScroll - divRef.scrollLeft;
     
     if( actualDivScroll <= 0 ){
         return true;

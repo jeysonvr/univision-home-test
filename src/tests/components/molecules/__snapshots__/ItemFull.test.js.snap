@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <ItemFull /> should show component correctly 1`] = `
+Array [
+  <div
+    className="modal animate__animated animate__fadeIn"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    tabIndex="-1"
+  >
+    <div
+      className="modal-dialog modal-dialog-centered"
+    >
+      <div
+        className="modal-content text-center"
+      >
+        <div
+          className="modal-header"
+        >
+          <h5
+            className="modal-title"
+          >
+            b
+          </h5>
+          <button
+            className="btn button__close"
+          >
+            <i
+              className="fas fa-times-circle fa-2x"
+            />
+          </button>
+        </div>
+        <div
+          className="modal-body card"
+        >
+          <img
+            alt="b"
+            className="img-fluid"
+            src="a"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="modal-backdrop fade show"
+  />,
+]
+`;

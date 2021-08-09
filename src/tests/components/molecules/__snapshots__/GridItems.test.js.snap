@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <GridItems /> should show component correctly 1`] = `
+Array [
+  <p
+    className="card"
+  >
+    Loading
+  </p>,
+  <div
+    className="alert alert-primary m-5"
+    role="alert"
+  >
+    Search something ...
+  </div>,
+]
+`;

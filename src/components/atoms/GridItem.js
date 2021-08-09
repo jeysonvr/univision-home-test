@@ -5,13 +5,12 @@ import { elementInViewport } from '../../helpers/extra';
 
 export const GridItem = ({id, title, url, parentScrollPosition = 0}) => {
 
-    const inputRef = useRef();
+    const imgRef = useRef();
     const [path, setPath] = useState('');
     const dispatch = useDispatch();
-    
 
     useEffect(() => {
-        if( !path && elementInViewport(inputRef.current, parentScrollPosition) ) {
+        if( !path && elementInViewport(imgRef.current, parentScrollPosition) ) {
             setPath(url);
         }
     }, [parentScrollPosition]);
@@ -26,7 +25,7 @@ export const GridItem = ({id, title, url, parentScrollPosition = 0}) => {
                 alt={ title } 
                 className="img-thumbnail lazy"
                 onClick={ () => handleImageClick(url, title) } 
-                ref={ inputRef }
+                ref={ imgRef }
                 src={ path } 
             />
         </div>

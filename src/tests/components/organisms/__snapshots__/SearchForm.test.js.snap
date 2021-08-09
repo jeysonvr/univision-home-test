@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <SearchForm /> should show component correctly 1`] = `
+<form
+  className="row m-2"
+  onSubmit={[Function]}
+>
+  <label
+    className="col-2 col-sm-10 col-md-2"
+  >
+    Keyword: 
+  </label>
+  <input
+    autoComplete="off"
+    className="col-12 col-sm-10 col-md-6"
+    name="keyword"
+    onChange={[Function]}
+    placeholder="Search ..."
+    style={
+      Object {
+        "marginRight": "10px",
+      }
+    }
+    type="text"
+    value=""
+  />
+  <button
+    className="btn btn-primary col-sm-10 col-md-3 mt-1"
+    onClick={[Function]}
+  >
+    <i
+      className=""
+    />
+    Search
+  </button>
+</form>
+`;

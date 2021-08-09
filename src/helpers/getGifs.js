@@ -1,6 +1,8 @@
-export const getGifs = async( keyword, offset ) => {
+export const getGifs = async( keyword, offset = 0 ) => {
 
-    const url = `https://api.giphy.com/v1/gifs/search?q=${ encodeURI( keyword ) }&offset=${ offset }&limit=10&api_key=lEb3Q8VAMchDtXItl4AA1AsaXEz8CmTT`;
+    const gifKey = process.env.REACT_APP__GIF_SEED || '';
+
+    const url = `https://api.giphy.com/v1/gifs/search?q=${ encodeURI( keyword ) }&offset=${ offset }&limit=10&api_key=${ gifKey }`;
 
     const resp = await fetch( url );
     const { data } = await resp.json();
