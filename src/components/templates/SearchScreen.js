@@ -21,7 +21,7 @@ export const SearchScreen = () => {
     return (
         <div className="container">
             <div className="row">
-                <h3>Search your favorite gifts</h3>
+                <h3>Search your favorite gifs</h3>
                 <hr />
             </div>
             <SearchForm
